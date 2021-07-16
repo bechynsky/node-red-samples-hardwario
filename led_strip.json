@@ -1,0 +1,469 @@
+[
+    {
+        "id": "67dcb1c8.2d631",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": true,
+        "info": ""
+    },
+    {
+        "id": "c585cc77.14b37",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led true",
+        "topic": "node/{id}/led/-/state/set",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "ca5ff62a.8531c8",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led false",
+        "topic": "node/{id}/led/-/state/set",
+        "payload": "false",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 160,
+        "y": 100,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "efcf37c0.3a4548",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "relay true",
+        "topic": "node/{id}/relay/-/state/set",
+        "payload": "true",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 160,
+        "y": 200,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "bacff13f.03745",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "relay false",
+        "topic": "node/{id}/relay/-/state/set",
+        "payload": "false",
+        "payloadType": "bool",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 160,
+        "y": 240,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "56c8ee08.393bb",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led get",
+        "topic": "node/{id}/led/-/state/get",
+        "payload": "null",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "46b79f56.1b355",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "relay get",
+        "topic": "node/{id}/relay/-/state/get",
+        "payload": "null",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 160,
+        "y": 280,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "d18b6184.16a69",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip set color #ff0000",
+        "topic": "node/{id}/led-strip/-/color/set",
+        "payload": "\"#ff0000\"",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "e5cd68e5.fdedc8",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip set color #008000",
+        "topic": "node/{id}/led-strip/-/color/set",
+        "payload": "\"#008000\"",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "3920241b.934e9c",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip compound",
+        "topic": "node/{id}/led-strip/-/compound/set",
+        "payload": "[20, \"#ff0000\", 20, \"#ff7f00\", 20, \"#ffff00\", 20, \"#00ff00\", 20, \"#0000ff\", 20, \"#960082\", 24, \"#D500ff\"]",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 190,
+        "y": 580,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "5f9eed07.880014",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect test",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"test\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "79720a40.206ec4",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect rainbow",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"rainbow\", \"wait\":50}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 200,
+        "y": 660,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "73bf5eab.33969",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect rainbow-cycle",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"rainbow-cycle\", \"wait\":50}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 220,
+        "y": 700,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "b082db74.ee9258",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect theater-chase-rainbow",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"theater-chase-rainbow\", \"wait\":50}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 250,
+        "y": 740,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "ef55c458.e0ea98",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip set brightness 50%",
+        "topic": "node/{id}/led-strip/-/brightness/set",
+        "payload": "50",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 220,
+        "y": 480,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "b3fe5dd8.9edbe",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip set brightness 100%",
+        "topic": "node/{id}/led-strip/-/brightness/set",
+        "payload": "100",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 220,
+        "y": 520,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "c116cf3b.b9dab",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect color-wipe blue",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"color-wipe\", \"wait\":50, \"color\": \"#0000ff\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 220,
+        "y": 780,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "468c0e69.82bf8",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip set color #000000(00)",
+        "topic": "node/{id}/led-strip/-/color/set",
+        "payload": "\"#000000(00)\"",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 220,
+        "y": 420,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "4a17bd9b.d06664",
+        "type": "mqtt out",
+        "z": "67dcb1c8.2d631",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "1afd9d33.4dc1d3",
+        "x": 890,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ff30f3e7.575ba",
+        "type": "change",
+        "z": "67dcb1c8.2d631",
+        "name": "set node id",
+        "rules": [
+            {
+                "t": "change",
+                "p": "topic",
+                "pt": "msg",
+                "from": "{id}",
+                "fromt": "str",
+                "to": "power-controller:0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "4a17bd9b.d06664"
+            ]
+        ]
+    },
+    {
+        "id": "4dcb47f2.8adaf8",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect stroboscope blue",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"stroboscope\", \"wait\":50, \"color\":\"#0000ff\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 230,
+        "y": 820,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "c5afceee.e2975",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect icicle red",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"icicle\", \"wait\":50, \"color\":\"#ff0000\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 200,
+        "y": 860,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "3cbb036a.82e1dc",
+        "type": "inject",
+        "z": "67dcb1c8.2d631",
+        "name": "led-strip effect pulse-color red",
+        "topic": "node/{id}/led-strip/-/effect/set",
+        "payload": "{\"type\":\"pulse-color\", \"wait\":200, \"color\":\"#ff0000\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "x": 220,
+        "y": 900,
+        "wires": [
+            [
+                "ff30f3e7.575ba"
+            ]
+        ]
+    },
+    {
+        "id": "1afd9d33.4dc1d3",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
